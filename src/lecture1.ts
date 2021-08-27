@@ -59,8 +59,19 @@ async function getDataFromAPIAnotherWay(url: string) {
   return result;
 }
 
-function consoleNumbers(num: number[], cb: (num: number) => void) {
+function consoleNumbers(
+  num: number[],
+  cb: (num: number) => void,
+  optionalParameter?: boolean
+) {
   num.map(cb);
 }
 
 consoleNumbers([1, 3], (item) => console.log(item));
+
+function unsureParams(first: number, ...unsure: string[]) {
+  console.log(first);
+  unsure.map((str) => console.log(str));
+}
+
+unsureParams(1, "HY", "HELLO");
