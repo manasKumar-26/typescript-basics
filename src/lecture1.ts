@@ -69,7 +69,7 @@ function consoleNumbers(
 
 consoleNumbers([1, 3], (item) => console.log(item));
 
-function unsureParams(first: number, ...unsure: string[]) {
+export function unsureParams(first: number, ...unsure: string[]) {
   console.log(first);
   unsure.map((str) => console.log(str));
 }
