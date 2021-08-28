@@ -75,5 +75,3 @@ export function unsureParams(first: number, ...unsure: string[]) {
 }
 
 unsureParams(1, "HY", "HELLO");
-
-const abc;
