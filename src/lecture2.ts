@@ -72,4 +72,11 @@ const [newState, updateNewSTate] = useState("Manas");
 
 type randomGeneratedSomethingType = [number, (value: number) => string];
 
-function typeAliasFunction(props: randomGeneratedSomethingType): void {}
+function typeAliasFunction(propsArray: randomGeneratedSomethingType): void {
+  const [number, numStringFunc] = propsArray;
+  console.log(propsArray);
+  console.log(number);
+  console.log(numStringFunc(22));
+}
+
+typeAliasFunction([222, (num: number) => `Hi I'm a number: ${num}`]);
