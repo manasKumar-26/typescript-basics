@@ -27,3 +27,29 @@ len("Manas");
 len([1, 2, 4]);
 // len(11);
 // len({ length: 1 });
+
+// Branded types
+
+type USD = number & { _brand: "USD" };
+type EUR = number & { _brand: "EUR" };
+
+let dollar: USD = 10 as USD;
+let eur: EUR = 10 as EUR;
+
+function convertToDollars(money: EUR): USD {
+  return (money * 1.19) as USD;
+}
+
+// Discriminating Unions - To discriminate between similar object types
+
+interface FruitObject {
+  type: "FruitObject";
+  name: string;
+  juice: () => void;
+}
+
+interface vegObject {
+  type: "vegObject";
+  name: string;
+  steam: () => void;
+}
