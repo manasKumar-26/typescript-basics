@@ -3,6 +3,7 @@ const obj = {
   here: "any",
 } as const;
 
+const tupler = [1, 2, 4] as const;
 // Helps us to some what replace ENUMS
 
 function replaceEnum(params: typeof obj[keyof typeof obj]): void {
@@ -53,3 +54,10 @@ interface vegObject {
   name: string;
   steam: () => void;
 }
+
+/**
+ * Assertion Signatures
+ */
+
+const canvas = document.getElementById("canvas") as HTMLCanvasElement;
+const canvasContext = canvas.getContext("2d");
